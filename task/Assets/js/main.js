@@ -29,8 +29,8 @@ function updateTodoList()
 updateTodoList()*/
 
 
-const newTaskInput = document.querySelector("#new-task input");
-const tasksDiv = document.querySelector("#tasks");
+const newTaskInput = document.querySelector(".new-task input");
+const tasksDiv = document.querySelector(".tasks");
 let deleteTasks, editTasks, tasks;
 let updateNote = "";
 let count;
@@ -127,18 +127,18 @@ const updateStorage = (index, taskValue, completed) => {
   displayTasks();
 };
 
-document.querySelector("#push").addEventListener("click", () => {
-  //Enable the edit button
+document.querySelector(".push").addEventListener("click", () => {
+  
   disableButtons(false);
   if (newTaskInput.value.length == 0) {
     alert("Please Enter A Task");
   } else {
-    //Store locally and display from local storage
+    
     if (updateNote == "") {
-      //new task
+      
       updateStorage(count, newTaskInput.value, false);
     } else {
-      //update task
+      
       let existingCount = updateNote.split("_")[0];
       removeTask(updateNote);
       updateStorage(existingCount, newTaskInput.value, false);

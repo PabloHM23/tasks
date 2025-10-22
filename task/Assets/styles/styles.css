@@ -14,7 +14,7 @@ body {
   top: 50%;
   left: 50%;
 }
-#new-task {
+.new-task {
   position: relative;
   background-color: #ffffff;
   padding: 1.8em 1.25em;
@@ -24,7 +24,7 @@ body {
   grid-template-columns: 9fr 3fr;
   gap: 1em;
 }
-#new-task input {
+.new-task input {
   font-family: "Poppins", sans-serif;
   font-size: 1em;
   border: none;
@@ -33,11 +33,11 @@ body {
   color: #111111;
   font-weight: 500;
 }
-#new-task input:focus {
+.new-task input:focus {
   outline: none;
   border-color: #0b87ff;
 }
-#new-task button {
+.new-task button {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1em;
@@ -48,7 +48,7 @@ body {
   border-radius: 0.3em;
   cursor: pointer;
 }
-#tasks {
+.tasks {
   background-color: #ffffff;
   position: relative;
   padding: 1.8em 1.25em;
@@ -66,10 +66,21 @@ body {
   border-bottom: 2px solid #d1d3d4;
   cursor: pointer;
 }
+
+.tasks button:hover{
+  background-color: #111111;
+  color: white;
+}
+
 .task span {
   font-family: "Poppins", sans-serif;
   font-size: 0.9em;
   font-weight: 400;
+}
+
+.tasks span:hover{
+  background-color: #111111;
+  color: white;
 }
 .task button {
   color: #ffffff;
@@ -79,6 +90,10 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.push:hover{
+  background-color: #7fb0e0;
 }
 .delete {
   background-color: #fb3b3b;
